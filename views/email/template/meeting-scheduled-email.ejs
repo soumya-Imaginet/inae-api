@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Meeting Scheduled Email Template." />
+  <title>Meeting Scheduled Notification</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f2f3f8;
+      font-family: "Open Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+      width: 100%;
+      max-width: 570px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+    }
+
+    a:hover {
+      text-decoration: underline !important;
+    }
+
+    .email-wrapper {
+      padding: 25px;
+    }
+
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #edf2fb;
+    }
+
+    .content {
+      padding: 25px;
+      background-color: #f5f3f4;
+    }
+
+    .divider {
+      border-top: 1px solid #cecece;
+      margin: 25px 0;
+      width: 100%;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: rgba(69, 80, 86, 0.74);
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .button {
+      background: #402e7a;
+      text-decoration: none !important;
+      font-weight: 600;
+      color: #ffffff !important;
+      text-transform: uppercase;
+      font-size: 14px;
+      padding: 12px 30px;
+      border-radius: 50px;
+      display: inline-block;
+      margin: 20px auto 0;
+      text-align: center;
+    }
+
+    .button:hover {
+      background-color: #2e1d5a;
+    }
+
+    @media screen and (max-width: 600px) {
+      .email-wrapper {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <!-- Header Section with Logo -->
+    <tr>
+      <td class="header">
+        <a href="https://www.inae.in/" title="logo" target="_blank">
+          <img width="250" src="https://www.inae.in/wp-content/uploads/2020/07/logon.png" alt="INAE Logo" />
+        </a>
+      </td>
+    </tr>
+
+    <!-- Email Content -->
+    <tr>
+      <td class="content">
+        <h4 style="font-size: 18px; color: #1e1e2d; font-weight: 700; text-align: left;">
+          Dear <%= committeeName %>,
+        </h4>
+        <p style="font-size: 16px; color: #1e1e2d; text-align: left; text-align: justify;">
+          Greetings from INAE!
+        </p>
+        <p style="font-size: 16px; color: #1e1e2d; text-align: left; text-align: justify;">
+          It is proposed to organize the meeting of the Individual Membership Committee for
+          evaluation of applications for Individual Membership of INAE on <strong><%= meetingDateTime %></strong> over
+          WebEx. The aim of this meeting is to deliberate upon the evaluation of the applications
+          received for Individual Membership. May we request your concurrence regarding the
+          suggested dates and time slot for the meeting.
+          <!-- <strong><%= applicantName %></strong> made on <strong><%= applicationCreatedTime %></strong>. -->
+        </p>
+        <p style="font-size: 16px; color: #1e1e2d; text-align: left; text-align: justify;">
+          You are requested to kindly confirm your availability for attending the said meeting vide
+          the link https://doodle.com/meeting/participate/id/eVomEqWa, latest by <strong><%= meetingDateTime %></strong>.
+        </p>
+
+        <p style="font-size: 16px; color: #1e1e2d; text-align: left; text-align: justify;">
+          Kindly indicate if both the slots are acceptable by clicking on both dates so that most of the
+          members can be accommodated in one common slot.
+        </p>
+
+        <p style="font-size: 16px; color: #1e1e2d; text-align: left; text-align: justify;">
+          On receipt of confirmation, the said meeting will be scheduled accordingly over WebEx
+          and the link for joining and the agenda will be issued subsequently.
+
+        </p>
+        <div class="divider"></div>
+
+        <!-- Footer Message -->
+        <p style="font-size: 14px; color: #1e1e2d; text-align: left; margin-top: 20px;">
+          With regards,<br />
+          Secretariat<br />
+          <strong>Indian National Academy of Engineering (INAE)</strong><br /><br />
+          Ground Floor, Block-II,<br />
+          Technology Bhavan,<br />
+          Mehrauli Road,<br />
+          New Delhi-110 016.<br />
+          Phone: 011-26582475<br />
+          Website: <a href="https://www.inae.in/" style="color: #402e7a; text-decoration: none;">www.inae.in</a>
+        </p>
+      </td>
+    </tr>
+
+    <!-- Footer -->
+    <tr>
+      <td class="footer">
+        &copy; <a href="https://www.inae.in/" style="color: rgba(69, 80, 86, 0.74); text-decoration: none;">
+          <strong>www.inae.in</strong>
+        </a>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>

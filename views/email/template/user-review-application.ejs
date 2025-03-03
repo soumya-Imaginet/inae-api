@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="User Registration Email Template." />
+  <title>User Membership Update Email</title>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f2f3f8;
+      font-family: "Open Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    table {
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      /* Center image */
+    }
+
+    a:hover {
+      text-decoration: underline !important;
+    }
+
+    .email-wrapper {
+      max-width: 570px;
+      width: 100%;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e9ecef;
+    }
+
+    .logo {
+      padding: 20px 20px;
+      display: inline-block;
+      /* Center the logo horizontally */
+    }
+
+    .divider {
+      border-top: 1px solid #cecece;
+      margin: 25px 0;
+      width: 100%;
+    }
+
+    .login-details {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border: 1px solid #ececec;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-size: 15px;
+      line-height: 24px;
+      color: #333333;
+      max-width: 300px;
+      /* Limit the width of the OTP section */
+      margin: 0 auto;
+      /* Center OTP section */
+      text-align: center;
+      /* Center text in OTP section */
+    }
+
+    .login-details p {
+      margin: 0;
+    }
+
+    .login-details p strong {
+      color: #1e1e2d;
+      font-weight: 600;
+    }
+
+    .button {
+      background: linear-gradient(135deg, #5A3FC5, #402e7a);
+      /* Gradient effect */
+      font-weight: 600;
+      color: #ffffff !important;
+      text-transform: uppercase;
+      font-size: 14px;
+      padding: 12px 30px;
+      border-radius: 50px;
+      display: inline-block;
+      margin: 20px auto 0;
+      text-align: center;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0px 4px 10px rgba(64, 46, 122, 0.4);
+      /* Soft shadow */
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Hover Effect */
+    .button:hover {
+      background: linear-gradient(135deg, #6C4FD6, #5039A3);
+      /* Lighter gradient */
+      transform: scale(1.05);
+      /* Slight scale effect */
+      box-shadow: 0px 6px 14px rgba(64, 46, 122, 0.6);
+    }
+
+    /* Click Effect */
+    .button:active {
+      transform: scale(0.98);
+      box-shadow: 0px 2px 6px rgba(64, 46, 122, 0.3);
+    }
+
+    /* Add subtle animated shine */
+    .button::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -100%;
+      width: 300%;
+      height: 300%;
+      background: rgba(255, 255, 255, 0.2);
+      transform: rotate(45deg);
+      transition: all 0.7s ease-in-out;
+    }
+
+    .button:hover::before {
+      left: 100%;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .footer p {
+      font-size: 14px;
+      color: rgba(69, 80, 86, 0.74);
+      line-height: 18px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .email-wrapper {
+        padding: 15px;
+      }
+
+      .button {
+        font-size: 13px;
+        padding: 10px 20px;
+        border-radius: 40px;
+        box-shadow: 0px 3px 8px rgba(64, 46, 122, 0.3);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <table align="center" cellpadding="0" cellspacing="0" border="0" class="email-wrapper">
+      <tr>
+        <td style="text-align: center; padding: 20px; background-color: #edf2fb">
+          <a href="https://www.inae.in/" title="logo" target="_blank">
+            <img width="400" src="https://www.inae.in/wp-content/uploads/2020/07/logon.png" alt="" title="logo" />
+          </a>
+        </td>
+      </tr>
+      <tr style="background-color: #f5f3f4;">
+        <td>
+          <div style="padding: 18px;">
+            <h4 style="font-size: 18px; color: #1e1e2d; font-weight: 700; text-align: left;">
+              Dear Admin,
+            </h4>
+            <div class="content">
+              <p>We have received a request from an applicant <%= salutation %><%= applicant_Name %>
+                <!-- (<%= designation %>,<%=instituteName %>)  -->
+                to update their membership application details.</p>
+              <p>We request you to review and take the appropriate action.</p>
+
+              <p style="font-size: 16px; color: #1e1e2d; text-align: justify;">
+                Thank you for your prompt attention to this matter.
+              </p>
+
+              <p style="text-align: center;">
+                <a href="<%= reviewURL %>" class="button">Review Application</a>
+              </p>
+
+              <div class="divider"></div>
+              <p style="font-size: 14px; color: #1e1e2d; text-align: left;">
+                With regards,<br /><br />
+                Secretariat<br />
+                <strong>Indian National Academy of Engineering (INAE)</strong><br />
+                Ground Floor, Block-II,<br />
+                Technology Bhavan,<br />
+                New Mehrauli Road,<br />
+                New Delhi-110 016.<br />
+                Phone: 011-26582475<br />
+                Website: <a href="https://www.inae.in/" style="color: #402e7a; text-decoration: none;">www.inae.in</a>
+              </p>
+            </div>
+        </td>
+      </tr>
+
+      <tr>
+        <td class="footer">
+          <p>&copy; <a href="https://www.inae.in/" style="color: rgba(69, 80, 86, 0.74); text-decoration: none;"><strong>www.inae.in</strong></a></p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>
