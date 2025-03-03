@@ -1,5 +1,5 @@
 require("dotenv").config();
-require('./views/cronjobs/cronjobs');
+require("./views/cronjobs/cronjobs");
 const express = require("express");
 const path = require("path");
 const i18n = require("./i18n/strings");
@@ -49,6 +49,9 @@ app.use("/api/v1/status", statusRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/forms", membershipRouter);
 app.use("/api/v1/miscellaneous", miscellaneousRouter);
+app.use("/api/v1/testing", (req, res) => {
+  res.json({ message: "Testing route is working!" });
+});
 
 const PORT = process.env.APP_PORT || 5000;
 app.listen(PORT, () => {
