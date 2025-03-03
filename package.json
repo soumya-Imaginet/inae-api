@@ -4,7 +4,7 @@
   "description": "server codes to maintain the apis for the inae individual membership software.",
   "main": "app.js",
   "engines": {
-    "node": "20.x"
+    "node": "18.x"
   },
   "scripts": {
     "start": "node app.js"
