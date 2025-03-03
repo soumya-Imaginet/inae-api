@@ -49,8 +49,8 @@ app.use("/api/v1/status", statusRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/forms", membershipRouter);
 app.use("/api/v1/miscellaneous", miscellaneousRouter);
-app.use("/api/v1/testing", (req, res) => {
-  res.json({ message: "Testing route is working!" });
+app.get("/", (req, res) => {
+  res.status(200).send("Testing route is working!");
 });
 
 const PORT = process.env.APP_PORT || 5000;
