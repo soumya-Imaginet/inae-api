@@ -50,7 +50,12 @@ app.use("/api/v1/user", userRouter);
 app.use("/api/v1/forms", membershipRouter);
 app.use("/api/v1/miscellaneous", miscellaneousRouter);
 app.get("/", (req, res) => {
-  res.status(200).send("Testing route is working!");
+  try {
+    res.send("Hello World!");
+  } catch (error) {
+    console.error("Error occurred:", error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 const PORT = process.env.APP_PORT || 5000;
